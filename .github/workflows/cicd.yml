@@ -1,0 +1,30 @@
+name: cicd
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        run: echo "Code checkout done"
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Code build
+        run: echo "Code Build is done"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Test
+        run: echo "Code test is done"
+  deploy:
+    steps:
+      runs-on: ubuntu-latest
+      - name: Code Deploy
+        run: echo "Code Deployed successfully"
+  
+  
