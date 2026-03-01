@@ -22,9 +22,9 @@ jobs:
       - name: Code Test
         run: echo "Code test is done"
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-        needs: test
       - name: Code Deploy
         run: echo "Code Deployed successfully"
   
