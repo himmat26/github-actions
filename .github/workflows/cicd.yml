@@ -24,6 +24,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+        needs: test
       - name: Code Deploy
         run: echo "Code Deployed successfully"
   
