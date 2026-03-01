@@ -12,11 +12,13 @@ jobs:
       - name: Code Checkout
         run: echo "Code checkout done"
   build:
+    needs: code
     runs-on: ubuntu-latest 
     steps:
       - name: Code build
         run: echo "Code Build is done"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Code Test
